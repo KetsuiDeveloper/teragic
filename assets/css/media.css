@@ -1,0 +1,50 @@
+/* mobile */
+@media only screen and (max-width: 1000px) {
+    body{
+        padding: 0;
+    }
+    .profile-img{
+        width: 70px;
+        display: inline-block;
+    }
+    .user-name-span{
+        display: inline-block !important;
+        width: 60%;
+    }
+    .money-box{
+        text-align: left;
+        margin-top: 10px;
+    }
+    .money{
+        width: 100%;
+    }
+    .sidebar li a{
+        padding: 5px;
+        font-size: 16px;
+    }
+    .sidebar-background{
+        display: none;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .mobile-burger{
+        display: block;
+        z-index: 15;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-right: 10px;
+        position: absolute;
+        right: 0;
+    }
+    .mobile-burger svg{
+        width: 40px;
+        height: 40px;
+        background-color: #078ad4;
+        border-radius: 10px;
+        fill: #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 1px 1px rgba(0,0,0,.16);
+    }
+}
