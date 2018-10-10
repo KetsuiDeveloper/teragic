@@ -11,9 +11,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-6 offset-lg-3">
-                    <div class="select-hero-tutorial">
-                        <p>¡A continuación podrás elegir a tu héroe!</p>
-                        <p>¡Solo podrás hacerlo una vez, asi que elige sabiamente!</p>
+                    <div class="select-hero-tutorial mediFont">
+                        <p>A continuación podrás elegir a tu <strong>héroe</strong></p>
+                        <p><strong>Solo podrás hacerlo una vez</strong>, asi que elige sabiamente</p>
+                        <a id="close-this" class="btn-aceptar noselect text-white" >Aceptar</a>
                     </div>
                 </div>
             </div>

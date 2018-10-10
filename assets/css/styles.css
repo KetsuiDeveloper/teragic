@@ -77,10 +77,11 @@ body{
 }
 .select-hero-tutorial{
   background-color: rgba(255,255,255,0.8);
-  padding: 10px;
+  padding: 30px 20px;
   border-radius: 10px;
   margin-top: 50px;
   text-align: center;
+  box-shadow: 2px 5px 15px #292929;
 }
 .all-heros{
   display: flex;
@@ -245,6 +246,23 @@ form input[type="text"], form input[type="password"]{
 }
 .btn-close:active{
   box-shadow: 0 0 0 1px #c63702 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 0 0 1px rgba(0,0,0,0.4) !important;
+  top: 8px;
+}
+.btn-aceptar{
+  cursor: pointer;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  padding: 10px;
+  transition: top .01s linear;
+  text-shadow: 1px 1px 1px #000;
+  color: #e7e7e7;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #37b80d inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #51C232, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
+  background-color: #66d83dcc;
+}
+.btn-aceptar:active{
+  box-shadow: 0 0 0 1px #03c602 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 0 0 1px rgba(0,0,0,0.4);
   top: 8px;
 }
 .profile-sidebar-display{
