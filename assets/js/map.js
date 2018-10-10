@@ -13,7 +13,7 @@ $(function(){
     var $key = $this.data("key");
     var $url = map[$key];
     if($key == "close"){
-      window.location = "./data/db/close.php";
+      window.location = "./data/close.php";
       return;
     }
     $.ajax({
