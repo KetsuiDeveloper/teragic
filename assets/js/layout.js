@@ -7,7 +7,7 @@ $(function(){
       });
     } else{
       $menu.slideUp(500, function() {
-        $('body').removeClass('stop-scrolling')
+        $('body').removeClass('stop-scrolling');
       });
     }
     

@@ -28,7 +28,7 @@
                 </div>
                 <div class="row">
                   <div class="col-12">
-                    <a class="btn-t" href="#" class="text-white mediFont">¿No tienes cuenta? <strong>Crea una</strong></a>
+                    <a class="btn-t" href="register.php" class="text-white mediFont">¿No tienes cuenta? <strong>Crea una</strong></a>
                     <a class="btn-t" href="#" class="text-white mediFont">¿Olvidaste la contraseña?</a>
                   </div>
                 </div>

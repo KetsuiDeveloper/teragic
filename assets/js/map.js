@@ -12,7 +12,10 @@ $(function(){
     var $this = $(this);
     var $key = $this.data("key");
     var $url = map[$key];
-
+    if($key == "close"){
+      window.location = "./data/db/close.php";
+      return;
+    }
     $.ajax({
       type: "GET",
       url: "/RpgGame/"+$url,
@@ -21,11 +24,10 @@ $(function(){
       $('#map-injection').html(resp);
       if(window.innerWidth <= 1000){
         $menu.slideUp(500, function() {
-          $('body').removeClass('stop-scrolling')
+          $('body').removeClass('stop-scrolling');
         });
       }
         //changeUrl($key);
-      
       }
     });
   });

@@ -10,7 +10,8 @@ foreach ($conn->query($getUserInfo) as $userInfo) {
   $user["icon"] = $userInfo["icon_img"];
   $user["guild"] = $userInfo["id_guild"];
   $user["money"] = $userInfo["game_money"];
-  $user["state"] = $userInfo["account_state"];}
+  $user["state"] = $userInfo["account_state"];
+}
 ?>
 <div class="mobile-burger">
 <svg viewBox="0 0 8 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path></svg>
@@ -44,6 +45,9 @@ foreach ($conn->query($getUserInfo) as $userInfo) {
     </li>
     <li>
       <a href="" data-target='map-list' data-key='tienda'>Tienda</a>
+    </li>
+    <li>
+      <a class="btn-close" href="" data-target='map-list' data-key='close'>Cerrar sesión</a>
     </li>
   </ul>
 </div>

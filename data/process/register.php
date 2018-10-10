@@ -4,15 +4,18 @@ date_default_timezone_set('Europe/Madrid');
 if($_POST["password"] != $_POST["reppassword"]){
   //redirection and error msg
 }
+$username = $_POST["username"];
 if(!ctype_alpha($username)){
   //redirection and error msg
 }
 //default icon for new users
-$defaultImg = "./assets/images/icons/user.png";
+$defaultImg = 1;
 $date = date("d/n/o - G:i");
 $initial_money = 2000;
 $defaultHero = 0;
 //user
+//username, email, gender, password
+$user = array();
 $user["username"] = $_POST["username"];
 $user["email"] = $_POST["email"];
 $user["hero"] = $defaultHero;
@@ -29,15 +32,15 @@ $user["game_money"] = $initial_money;
 $user["account_state"] = "1";
 $user["account_role"] = 1;
 
-
-
 if(true){
-  if($password == $password){
+  if($_POST['password'] == $_POST['reppassword']){
     //cifrar clave
     $hash_passw = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 15]);
+    $user["password"] = $hash_passw;
     //insertar datos
     
-    $insertUser = $conn->prepare("INSERT INTO `users`(`username`, `email`, `hero`, `isEmailVerified`, `gender`, `password`, `icon`, `user_xp`, `user_hp`, `user_mana`, `id_guild`, `register_date`, `game_money`, `account_state`, `account_role`) VALUES (:username, :email, :hero, :isEmailVerified, :gender, :password, :icon, :user_xp, :user_hp, :user_mana, :id_guild, :register_date, :game_money, :account_state, account_role)");
+    $insertUser = $conn->prepare("INSERT INTO `users`(`username`, `email`, `hero`, `isEmailVerified`, `gender`, `password`, `icon`, `user_xp`, `user_hp`, `user_mana`, `id_guild`, `register_date`, `game_money`, `account_state`, `account_role`) 
+    VALUES (:username, :email, :hero, :isEmailVerified, :gender, :password, :icon, :user_xp, :user_hp, :user_mana, :id_guild, :register_date, :game_money, :account_state, :account_role)");
     $insertUser->bindParam(':username', $user["username"]);
     $insertUser->bindParam(':email', $user["email"]);
     $insertUser->bindParam(':hero', $user["hero"]);

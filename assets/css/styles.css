@@ -67,6 +67,77 @@ body{
 .go-quest:hover{
   transform: scale(1.05);
 }
+.select-hero-tutorial-box{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(64,64,64,0.8);
+}
+.select-hero-tutorial{
+  background-color: rgba(255,255,255,0.8);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 50px;
+  text-align: center;
+}
+.all-heros{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.each-hero{
+  transition: .2s ease-in-out;
+  width: 100%;
+  height: 100%;
+  background-color: #7a6d63e6;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  /*filter: blur(2px);*/
+}
+.each-hero:hover{
+  width: 150%;
+  background-color: #bba390e6;
+  box-shadow: 0px 0px 10px #0009;
+  z-index: 10;
+  filter: none;
+}
+.each-hero span{
+  display: block;
+  width: 100%;
+  background-color: rgba(64,64,64,0.7);
+  padding: 10px 0;
+}
+.each-hero:hover span{
+  background-color: rgba(64,64,64,0.9);
+}
+.message_box {
+  display: block;
+  margin: 10px auto;
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0px 0px 3px rgb(64,64,64);
+  transition: .2s ease;
+  border-bottom: 5px solid #fff;
+}
+.red_alert{
+  background-color: #e93232;
+  color: #fff;
+  font-weight: bold;
+}
+.green_alert{
+  background-color: #1bc53f;
+  color: #fff;
+  font-weight: bold;
+}
+.disabled {
+  background-image: linear-gradient(#939393, grey) !important;
+  cursor: progress !important;
+}
 .login-box{
   background-color: #f7f3efb3;
   box-shadow: 0 5px 2px #0006;
@@ -75,7 +146,12 @@ body{
 .login-box input{
   /*margin-bottom: 0;*/
 }
-form input{
+.form-block input, .form-block select{
+  display: block !important;
+  margin: 10px auto;
+  width: 300px;
+}
+form input, form select{
   padding: 7px;
   border-radius: 5px;
   box-shadow: 0px 0px 3px rgb(64,64,64);
@@ -160,6 +236,15 @@ form input[type="text"], form input[type="password"]{
 .sidebar li a:active{
   box-shadow: 0 0 0 1px #c63702 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 0 0 1px rgba(0,0,0,0.4);
   box-shadow: 0 0 0 1px #0276c6 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 0 0 1px rgba(0,0,0,0.4);
+  top: 8px;
+}
+
+.btn-close{
+  box-shadow: 0 0 0 1px #c63702 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #C24032, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5) !important;
+  background-color: #e74c3c !important;
+}
+.btn-close:active{
+  box-shadow: 0 0 0 1px #c63702 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 0 0 1px rgba(0,0,0,0.4) !important;
   top: 8px;
 }
 .profile-sidebar-display{
