@@ -40,8 +40,6 @@
             </div>
         </div>
     </div>
-
-
     <div class="all-heros">
         <?php
         $all_heros = "SELECT * FROM `heros` WHERE available = 1";
