@@ -116,6 +116,15 @@ body{
 .each-hero:hover span{
   background-color: rgba(64,64,64,0.9);
 }
+.select-hero-tutorial-stats{
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.select-hero-tutorial-stats span{
+  float: none;
+  margin-bottom: 10px;
+}
 .message_box {
   display: block;
   margin: 10px auto;

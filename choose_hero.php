@@ -27,6 +27,11 @@
                 <div class="col-12 col-lg-6 offset-lg-3">
                     <div class="select-hero-tutorial mediFont">
                         <p>¿Quieres elegir a <strong id="name"></strong>?</p>
+                        <div class="select-hero-tutorial-stats" id="char_data">
+                            <span class="stat-item item-bg text-white" id="char_atck"></span>
+                            <span class="stat-item item-bg text-white" id="char_def"></span>
+                            <span class="stat-item item-bg text-white" id="char_mgc"></span>
+                        </div>
                         <div class="row">
                             <div class="col-12 col-lg-6">
                                 <a id="choose-this" class="btn-aceptar noselect text-white" >Aceptar</a>
@@ -45,7 +50,7 @@
         $all_heros = "SELECT * FROM `heros` WHERE available = 1";
         foreach ($conn->query($all_heros) as $hero) {
             if(true): ?>
-                <div class="each-hero text-center" data-hero="<?php echo $hero["id"]; ?>" data-name="<?php echo $hero["name"]; ?>" style="background-image: url(<?php echo $hero["main_img"] ?>)">
+                <div class="each-hero text-center" data-hero="<?php echo $hero["id"]; ?>" data-atck="<?php echo $hero["base_damage"]; ?>" data-def="<?php echo $hero["base_defense"]; ?>" data-mgc="<?php echo $hero["base_magic"]; ?>" data-name="<?php echo $hero["name"]; ?>" style="background-image: url(<?php echo $hero["main_img"] ?>)">
                     <span class="mediFont text-white"><?php echo $hero["name"]; ?></span>
                 </div>
             <?php endif;

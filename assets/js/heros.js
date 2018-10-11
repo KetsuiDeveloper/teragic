@@ -8,8 +8,15 @@ $(function(){
     $('.each-hero').click(function(){
         var $this = $(this);
         $id = $this.data('hero');
-        $hero_name = $this.data('name');
+        $hero_name = $this.data('name'),
+        $atck = $this.data('atck'),
+        $def = $this.data('def'),
+        $mgc = $this.data('mgc');
         $('#name').html($hero_name);
+        $('#char_atck').html("Daño: "+$atck);
+        $('#char_def').html("Defensa: "+$def);
+        $('#char_mgc').html("Magia: "+$mgc);
+        
         $('#choose_msg').removeClass('d-none');
     });
     $('#close-this-msg').click(function(){
