@@ -58,7 +58,6 @@
     .message_box {
         width: 100%;
     }
-    
     .all-heros{
        flex-direction: column;
     }
@@ -89,5 +88,7 @@
         padding: 10px;
         margin-top: 70px;
     }
-    
+    .select-hero-tutorial-box .btn-close{
+        margin-top: 20px;
+    }
 }
