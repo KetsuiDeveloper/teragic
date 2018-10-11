@@ -16,7 +16,7 @@ foreach ($conn->query($getUserInfo) as $userInfo) {
 <div class="mobile-burger">
 <svg viewBox="0 0 8 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path></svg>
 </div>
-<div class="col-md-2 col-12 sidebar-background sidebar-position">
+<div class="col-lg-2 col-12 sidebar-background sidebar-position">
   <div class="profile-sidebar-display">
     <img src="<?php echo $user["icon"]; ?>" class="profile-img noselect" alt="profile-picture" id='profile-picture'>
     <span class="user-name-span"><?php echo $user["username"]; ?></span>

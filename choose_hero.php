@@ -20,12 +20,34 @@
             </div>
         </div>
     </div>
+
+    <div id="choose_msg" class="select-hero-tutorial-box d-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 offset-lg-3">
+                    <div class="select-hero-tutorial mediFont">
+                        <p>¿Quieres elegir a <strong id="name"></strong>?</p>
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <a id="choose-this" class="btn-aceptar noselect text-white" >Aceptar</a>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <a id="close-this-msg" class="btn-close noselect text-white" >Cancelar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="all-heros">
         <?php
         $all_heros = "SELECT * FROM `heros` WHERE available = 1";
         foreach ($conn->query($all_heros) as $hero) {
             if(true): ?>
-                <div class="each-hero text-center" data-hero="<?php echo $hero["id"]; ?>" style="background-image: url(<?php echo $hero["main_img"] ?>)">
+                <div class="each-hero text-center" data-hero="<?php echo $hero["id"]; ?>" data-name="<?php echo $hero["name"]; ?>" style="background-image: url(<?php echo $hero["main_img"] ?>)">
                     <span class="mediFont text-white"><?php echo $hero["name"]; ?></span>
                 </div>
             <?php endif;
